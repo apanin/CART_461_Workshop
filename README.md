@@ -4,7 +4,7 @@
 
 The first workshop was in regards to setting up the particle workbench as well as connecting the particle argon to the cloud. I initially had issues connecting the argon to my wifi network. Due to signal interference, I could only connect to the cloud through my phones hotspot if my router was turned off (I am assuming that the routers signal was causing interference, which was not in regards to the networks frequency, because it was a 2.4ghz). This issue was resolved a few weeks later when I changed my router for other reasons. 
 
-![alt text](https://github.com/apanin/CART_461_Workshop/blob/main/assets/workshop12.JPG)
+<img src="https://github.com/apanin/CART_461_Workshop/blob/main/assets/workshop12.JPG" width="50%" height="50%"> <br/>
 
 Once I could follow the workshop, everything ran as it was during the workshop. They did.
 One thing I did notice is that the code would not run when connected to the battery, even if the argon would connect to the cloud. Meaning if the code is flashed locally, it did not seem to executing if the connection was not made with the computer. I have no explanation to this.
