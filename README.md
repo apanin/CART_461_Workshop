@@ -131,7 +131,20 @@ In this workshop I mainly listened because I had not considered most of the topi
 It was interesting to consider some of these options for our project because the particle does not need to be running on the network in between data sends. Therefore I was looking into the differences between these modes to consider which would work best in our case. Considering tiles would be spread throughout the park, it could be that some tiles are left untouched for hours (possibly). With the use of gpio wake mode configuration for pins, we could make it so that tiles hibernate between reads and only send data through packets of information received within a fifteen minute interval of the initial contact.
 
 Furthermore this would require a timer object because you would want to keep track of the fifteen minute timeframe.
+Through a code that would look something like this:
 
+```c++
+int threshold = 500;
+
+  if(sleepcounter > 15) {
+    Serial.println(sleepcounter); sleepcounter = 0; 
+    config.mode(SystemSleepMode::STOP)
+    .network(NETWORK_INTERFACE_WIFI_STA, \
+    SystemSleepNetworkFlag::INACTIVE_STANDBY ) // SLEEP NETWORK READY UPON WAKE
+    .analog(A0, threshold, AnalogInterruptMode::ABOVE); //412milliVolts (3.3Volt))
+    .duration(1min); // <chrono> 1min, 1s, 1ms
+  }
+```
 
 ## TCP vs UDP
 
