@@ -29,7 +29,7 @@ From experience, creating particle webhooks can be a finicky process for syntax 
 ### first try
 My initial test was simply using the google maps api for the device locator code with a push button since I did not feel the need to make a webhook without a specific sensor need. Considering our project was to be using the internal code to count steps and evaluate sensor reads, we actually only needed an internal counter variable, and data was not to be processed in any particular manner (we would simply be sending a time stamp when the tile is triggered by pressure sensor reads exceeding the threshold).
 
-<img src="https://github.com/apanin/CART_461_Workshop/blob/main/assets/workshop2.JPG" width="80%" height="80%"> <br/>
+<img src="https://github.com/apanin/CART_461_Workshop/blob/main/assets/workshop2.gif" width="80%" height="80%"> <br/>
 
 ### json formatting
 I tend to agree that the json formatting is tedious, particularly in a context where we are using arduino c. The json writer is a good tool to format data if many parameters are sent to the data base, it makes things more clear and easy to read, I think this could be a good reference for future projects.
@@ -77,7 +77,7 @@ Serial.println(jw.getBuffer());
 
 In regards to what was done in this workshop, I created a webhook that would post our data to a firebase db using a push button instead of piezo sensors (I was trying to test the data sending functionalities rather than the sensors)
 
-<img src="https://github.com/apanin/CART_461_Workshop/blob/main/assets/workshop12.gif" width="80%" height="80%"> <br/>
+<img src="https://github.com/apanin/CART_461_Workshop/blob/main/assets/workshop2.JPG" width="80%" height="80%"> <br/>
 
 ```json 
 {
