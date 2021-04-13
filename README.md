@@ -7,7 +7,7 @@
 This workshop was dedicated to posting and receiving data taken in by sensors.
 This was done in a manner that can read more easily.
 
-'''c
+```c
 #include <google-maps-device-locator.h>
 
 GoogleMapsDeviceLocator locator;
@@ -29,7 +29,7 @@ void locationCallback(float lat, float lon, float accuracy) {
 void loop() {
   locator.loop();
 }
-'''
+```
 
 ## workshop 3 :: 
 
